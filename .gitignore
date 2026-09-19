@@ -16,3 +16,7 @@ desktop.ini
 
 # Archives
 *.zip
+
+# Fichiers sources bruts déposés hors du pipeline d'assets (non référencés par le site)
+images/hero IG 74.png
+images/logo IG 74.png
