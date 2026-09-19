@@ -1,0 +1,141 @@
+/* ============================================================
+   IG 74 ÉTANCHÉITÉ SERVICES — Accueil
+   ============================================================ */
+section.block{padding:96px 0}
+.head{max-width:660px;margin:0 auto 48px;text-align:center}
+.head h2{font-size:clamp(28px,3.4vw,42px);font-weight:800;margin:14px 0 14px}
+.head p{font-size:16.5px;color:var(--muted)}
+@media (max-width:600px){section.block{padding:64px 0}}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;overflow:hidden;background:var(--navy-deep);color:#fff;padding:64px 0 76px}
+.hero-bg{position:absolute;inset:0;z-index:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 22%;transform:scale(1.1);transform-origin:center top}
+.hero-bg::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(100deg,rgba(7,26,44,.94) 0%,rgba(7,26,44,.86) 32%,rgba(7,26,44,.55) 58%,rgba(7,26,44,.28) 100%);
+}
+.hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:end;min-height:480px;padding-top:20px}
+.hero-copy{padding-bottom:8px}
+.hero .eyebrow{color:var(--blue-light);margin-bottom:18px}
+.hero h1{font-size:clamp(34px,4.6vw,54px);font-weight:800;margin-bottom:18px;color:#fff}
+.hero h1 .accent{color:var(--blue-light)}
+.hero .lead{font-size:17.5px;color:rgba(255,255,255,.86);max-width:480px;margin-bottom:30px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:14px}
+.hero-script{
+  justify-self:end;align-self:start;margin-top:12px;max-width:280px;text-align:right;
+  font-family:"Caveat",cursive;font-size:26px;line-height:1.25;color:rgba(255,255,255,.92);
+  transform:rotate(-2deg);
+}
+@media (max-width:960px){
+  .hero-inner{grid-template-columns:1fr;min-height:0}
+  .hero-script{display:none}
+  .hero .lead{max-width:none}
+}
+@media (max-width:600px){
+  .hero{padding:44px 0 56px}
+  .hero-cta{flex-direction:column}
+  .hero-cta .btn{width:100%}
+}
+
+/* ---------- BANDE AVANTAGES ---------- */
+.advantages{background:#fff;border-bottom:1px solid var(--line)}
+.advantages .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:34px 24px}
+.adv-item{display:flex;align-items:center;gap:14px;padding:0 22px;border-left:1px solid var(--line)}
+.adv-item:first-child{border-left:0;padding-left:0}
+.adv-item .ico{
+  width:46px;height:46px;border-radius:10px;background:var(--paper);flex:0 0 auto;
+  display:flex;align-items:center;justify-content:center;color:var(--blue);
+}
+.adv-item b{display:block;font-size:15px;color:var(--navy);font-weight:700}
+.adv-item span{font-size:13.5px;color:var(--muted)}
+@media (max-width:900px){
+  .advantages .wrap{grid-template-columns:1fr 1fr;gap:24px 0}
+  .adv-item{border-left:0;padding:0}
+  .adv-item:nth-child(odd){padding-right:12px}
+}
+@media (max-width:520px){.advantages .wrap{grid-template-columns:1fr;gap:20px}}
+
+/* ---------- SERVICES ---------- */
+.services{background:var(--paper)}
+.svc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.svc-card{
+  background:#fff;border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column;
+  box-shadow:var(--shadow-card);transition:transform .2s ease,box-shadow .2s ease;
+}
+.svc-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-soft)}
+.svc-photo{aspect-ratio:16/11;position:relative;overflow:hidden;background:var(--navy-deep)}
+.svc-photo img{width:100%;height:100%;object-fit:cover;object-position:top center;transform:scale(1.22);transform-origin:top center;display:block}
+.svc-photo.svc-photo--icon{display:flex;align-items:center;justify-content:center;background:linear-gradient(155deg,var(--navy),var(--navy-deep))}
+.svc-photo.svc-photo--icon svg{width:48px;height:48px;color:rgba(255,255,255,.85)}
+.svc-body{padding:20px 20px 22px;display:flex;flex-direction:column;flex:1}
+.svc-body .ico{
+  width:40px;height:40px;border-radius:9px;background:var(--paper);color:var(--blue);
+  display:flex;align-items:center;justify-content:center;margin-bottom:12px;flex:0 0 auto;
+}
+.svc-body h3{font-size:17px;font-weight:800;margin-bottom:6px;color:var(--navy)}
+.svc-body p{font-size:13.5px;color:var(--muted);margin-bottom:auto;padding-bottom:16px}
+.svc-arrow{
+  width:36px;height:36px;border-radius:50%;border:1.5px solid var(--line-strong);
+  display:flex;align-items:center;justify-content:center;color:var(--navy);align-self:flex-end;
+  transition:background .2s,color .2s,border-color .2s;
+}
+a.svc-card:hover .svc-arrow{background:var(--blue);border-color:var(--blue);color:#fff}
+@media (max-width:1080px){.svc-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.svc-grid{grid-template-columns:1fr}}
+
+/* ---------- CTA BAND (photo + overlay) ---------- */
+.ctaband-photo{position:relative;overflow:hidden;background:var(--navy-deep);color:#fff}
+.ctaband-photo .bg{position:absolute;inset:0}
+.ctaband-photo .bg img{width:100%;height:100%;object-fit:cover;object-position:top center;transform:scale(1.2);transform-origin:top center}
+.ctaband-photo .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(7,26,44,.92),rgba(7,26,44,.72))}
+.ctaband-photo .wrap{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:56px 24px;flex-wrap:wrap}
+.ctaband-photo h2{color:#fff;font-size:clamp(24px,2.8vw,34px);font-weight:800;margin:10px 0 8px}
+.ctaband-photo p{color:rgba(255,255,255,.8);max-width:460px;font-size:15.5px}
+.ctaband-photo .cb-actions{display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+.ctaband-photo .cb-actions a.callback{color:rgba(255,255,255,.85);font-size:14px;display:inline-flex;align-items:center;gap:8px}
+.ctaband-photo .cb-actions a.callback:hover{color:#fff}
+@media (max-width:760px){.ctaband-photo .wrap{flex-direction:column;text-align:center}.ctaband-photo .cb-actions{align-items:center}}
+
+/* ---------- MÉTHODE ---------- */
+.process{background:#fff}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:12px}
+.step{text-align:left}
+.step .num{
+  width:38px;height:38px;border-radius:50%;background:var(--blue);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;margin-bottom:16px;
+}
+.step h4{font-size:17px;font-weight:800;margin-bottom:6px;color:var(--navy)}
+.step p{font-size:14px;color:var(--muted)}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr;gap:32px 24px}}
+@media (max-width:560px){.steps{grid-template-columns:1fr}}
+
+/* ---------- ENTREPRISE LOCALE ---------- */
+.local{background:var(--paper)}
+.local-grid{display:grid;grid-template-columns:1fr .85fr 1fr;gap:36px;align-items:center}
+.local-copy h2{font-size:clamp(26px,3vw,36px);font-weight:800;margin:12px 0 16px}
+.local-copy p{color:var(--muted);font-size:15.5px;margin-bottom:22px;max-width:420px}
+.local-media{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-soft);aspect-ratio:3/4;background:var(--navy-deep)}
+.local-media img{width:100%;height:100%;object-fit:cover;object-position:top center;transform:scale(1.3);transform-origin:top center;display:block}
+.local-points{display:grid;gap:18px}
+.local-point{display:flex;align-items:flex-start;gap:14px}
+.local-point .ico{
+  width:38px;height:38px;border-radius:9px;background:#fff;color:var(--blue);flex:0 0 auto;
+  display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-card);
+}
+.local-point span{font-size:15px;font-weight:600;color:var(--ink);padding-top:8px}
+@media (max-width:960px){
+  .local-grid{grid-template-columns:1fr;gap:32px}
+  .local-media{aspect-ratio:16/9;order:-1}
+  .local-media img{object-position:center 24%;transform:scale(1.1)}
+}
+
+/* ---------- BANDE RÉALISATIONS ---------- */
+.real-band{position:relative;overflow:hidden;background:var(--navy-deep);color:#fff}
+.real-band .bg{position:absolute;inset:0}
+.real-band .bg img{width:100%;height:100%;object-fit:cover;object-position:top center;transform:scale(1.2);transform-origin:top center}
+.real-band .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(96deg,rgba(7,26,44,.9),rgba(7,26,44,.55))}
+.real-band .wrap{position:relative;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:64px 24px;flex-wrap:wrap}
+.real-band h2{color:#fff;font-size:clamp(24px,2.8vw,32px);font-weight:800;margin-bottom:8px}
+.real-band p{color:rgba(255,255,255,.78);font-size:15px;max-width:440px}
+@media (max-width:760px){.real-band .wrap{flex-direction:column;text-align:center}}

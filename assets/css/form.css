@@ -1,0 +1,59 @@
+/* ============================================================
+   IG 74 ÉTANCHÉITÉ SERVICES — Page Contact / formulaire de devis
+   ============================================================ */
+.contact-hero{padding:40px 0 12px}
+.contact-hero h1{font-size:clamp(30px,4vw,44px);font-weight:800;margin:12px 0 10px}
+.contact-hero p{font-size:16.5px;color:var(--muted);max-width:640px}
+
+.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;padding:36px 0 88px;align-items:start}
+.contact-info h2{font-size:22px;font-weight:800;margin-bottom:16px}
+.cinfo{display:grid;gap:18px;margin-bottom:26px}
+.cinfo a,.cinfo div{display:flex;gap:14px;align-items:flex-start;font-size:15px}
+.cinfo .ico{width:38px;height:38px;border-radius:9px;background:var(--paper);color:var(--blue);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.cinfo .ci-k{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);display:block;margin-bottom:2px;font-weight:700}
+.cinfo b{font-weight:700;font-size:15.5px;color:var(--navy)}
+.zone-tags{display:flex;flex-wrap:wrap;gap:8px}
+.zone-tags span{font-size:13px;padding:7px 13px;background:var(--paper);border-radius:999px;color:var(--navy);font-weight:600}
+
+form#devisform{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);padding:32px}
+.form-progress{display:flex;align-items:center;margin-bottom:24px}
+.fp-step{
+  width:28px;height:28px;border-radius:50%;flex:0 0 auto;
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:12.5px;
+  background:#fff;border:2px solid var(--line-strong);color:var(--muted);
+  transition:background .2s,border-color .2s,color .2s;
+}
+.fp-step.active{border-color:var(--blue);color:var(--blue);background:#fff}
+.fp-step.done{background:var(--blue);border-color:var(--blue);color:#fff}
+.fp-line{flex:1 1 auto;height:2px;background:var(--line-strong);margin:0 8px}
+.form-step{display:none}
+.form-step.active{display:block}
+.fld-label{display:block;font-size:15px;font-weight:700;margin-bottom:12px;color:var(--navy)}
+.choice-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px}
+.choice-btn{
+  display:block;width:100%;text-align:left;padding:14px 15px;border-radius:8px;
+  border:1.5px solid var(--line-strong);background:#fff;color:var(--ink);
+  font-family:inherit;font-size:14.5px;font-weight:600;cursor:pointer;
+  transition:border-color .15s,background .15s;
+}
+.choice-btn:hover{border-color:var(--blue)}
+.choice-btn.selected{border-color:var(--blue);background:#E9F5FE;color:#065690}
+.fld{margin-bottom:16px}
+.fld label{display:block;font-size:13px;font-weight:600;margin-bottom:6px;color:var(--navy)}
+.fld input{width:100%;padding:12px 14px;border:1px solid var(--line-strong);border-radius:8px;font-family:inherit;font-size:15px;background:#fff;color:var(--ink)}
+.fld input:focus{outline:2px solid var(--blue);border-color:var(--blue)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fld-optional{font-weight:400;color:var(--muted);text-transform:none}
+.fld-photo input[type="file"]{width:100%;padding:10px 12px;border:1px dashed var(--line-strong);border-radius:8px;background:#fff;font-size:13px;color:var(--muted)}
+.step-actions{display:flex;gap:12px;margin-top:6px}
+.step-actions .btn{flex:1;justify-content:center}
+.step-next[disabled]{opacity:.5;cursor:not-allowed}
+form#devisform .btn-primary{width:100%;justify-content:center}
+.formnote{font-size:12.5px;color:var(--muted);margin-top:14px;text-align:center}
+#formok,#formerr,#formpending{margin-top:16px;padding:14px 16px;border-radius:8px;font-size:14px;font-weight:600}
+#formok{background:#E7F4EC;border:1px solid #9FD4B4;color:#1B5E36}
+#formerr{background:#FDECEC;border:1px solid #F0B4B4;color:#8A2020}
+#formpending{background:#EAF4FC;border:1px solid #AFD9F5;color:#0B4A78}
+
+@media (max-width:960px){.contact-grid{grid-template-columns:1fr;gap:36px}}
+@media (max-width:480px){.choice-grid,.row2{grid-template-columns:1fr}}

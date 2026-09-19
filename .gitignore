@@ -1,0 +1,18 @@
+# Dépendances locales (utilisées uniquement pour le traitement d'images en développement,
+# non nécessaires à l'exécution du site statique)
+node_modules/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Éditeurs / IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Archives
+*.zip
